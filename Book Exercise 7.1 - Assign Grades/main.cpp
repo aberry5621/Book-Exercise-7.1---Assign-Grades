@@ -24,7 +24,12 @@ int main() {
         cin >> scores_array[i];
     }
     
-    cout << scores_array[0] << endl;
+    int best = scores_array[0];
+    for (int i = 1; i < num_students; i++) {
+        if (scores_array[i] > best) best = scores_array[i];
+    }
+    
+    cout << "Best score is " << best << endl;
     
     return 0;
     
