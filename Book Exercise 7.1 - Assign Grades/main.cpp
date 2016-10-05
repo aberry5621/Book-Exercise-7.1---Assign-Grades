@@ -29,7 +29,20 @@ int main() {
         if (scores_array[i] > best) best = scores_array[i];
     }
     
-    cout << "Best score is " << best << endl;
+    for (int i = 0; i < num_students; i++) {
+        
+        if (scores_array[i] >= best - 10) {
+            cout << "Student " << i << " score is " << scores_array[i] << " and grade is A" << endl;
+        } else if (scores_array[i] >= best - 20) {
+            cout << "Student " << i << " score is " << scores_array[i] << " and grade is B" << endl;
+        } else if (scores_array[i] >= best - 30) {
+            cout << "Student " << i << " score is " << scores_array[i] << " and grade is C" << endl;
+        } else if (scores_array[i] >= best - 40) {
+            cout << "Student " << i << " score is " << scores_array[i] << " and grade is D" << endl;
+        } else {
+            cout << "Student " << i << " score is " << scores_array[i] << " and grade is F" << endl;
+        }
+    }
     
     return 0;
     
